@@ -1,5 +1,6 @@
 import React from "react";
 import { RouteHandler } from "react-router";
+import {Grid} from 'react-bootstrap';
 import MainMenu from "components/MainMenu";
 
 import styles from "./Application.css";
@@ -15,9 +16,10 @@ export default class Application extends React.Component {
 		var { loading } = this.props;
 		return <div className={styles.this + (loading ? " " + styles.loading : "")}>
 			<div className={styles.loadingElement}>loading...</div>
-			<h1>react-starter</h1>
 			<MainMenu />
-			<RouteHandler />
+			<Grid>
+				<RouteHandler />
+			</Grid>
 		</div>;
 	}
 }
