@@ -18,3 +18,24 @@
 .loadingElement {
 	float: right;
 }
+
+.tabs > ul > li > a {
+  text-align: center;
+}
+.circular {
+  width: 120px;
+  height: 120px;
+  background-size: 120px 120px;
+  border-radius: 60px;
+}
+
+/* Champions */  
+.icon-ahri {
+  background-image: url(http://img2.wikia.nocookie.net/__cb20150402215212/leagueoflegends/images/1/18/AhriSquare.png);
+}
+.icon-akali {
+  background-image: url(http://img1.wikia.nocookie.net/__cb20150402215220/leagueoflegends/images/a/a5/AkaliSquare.png);
+}
+.icon-annie {
+  background-image: url(http://img3.wikia.nocookie.net/__cb20150404100758/leagueoflegends/images/6/6f/AnnieSquare.png);
+}

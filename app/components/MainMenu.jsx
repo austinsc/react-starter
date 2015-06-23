@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import { NavItemLink } from 'react-router-bootstrap';
 import { Navbar, Nav, NavItem, DropdownButton, MenuItem } from 'react-bootstrap'
 import ReactLogo from "elements/ReactLogo";
 
@@ -9,9 +10,10 @@ export default class MainMenu extends React.Component {
 		const navbarInstance = (
 		  <Navbar brand='React-Bootstrap'>
 		    <Nav>
-		      <NavItem eventKey={1} href='#'>Link</NavItem>
+		      <NavItemLink eventKey={1} to="tier-list">Tier List</NavItemLink>
 		      <NavItem eventKey={2} href='#'>Link</NavItem>
-		      <DropdownButton eventKey={3} title='Dropdown'>
+		      <NavItem eventKey={3} href='#'>Link</NavItem>
+		      <DropdownButton eventKey={4} title='Dropdown'>
 		        <MenuItem eventKey='1'>Action</MenuItem>
 		        <MenuItem eventKey='2'>Another action</MenuItem>
 		        <MenuItem eventKey='3'>Something else here</MenuItem>

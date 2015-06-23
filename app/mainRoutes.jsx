@@ -12,6 +12,7 @@ import TodoItemPage from "route-handlers/TodoItemPage";
 import HomePage     from "route-handlers/HomePage";
 import NotFoundPage from "route-handlers/NotFoundPage";
 import ChatPage     from "route-handlers/ChatPage";
+import TierList     from 'pages/TierList';
 /* eslint-enable */
 
 // polyfill
@@ -22,6 +23,7 @@ if(!Object.assign)
 module.exports = (
 	<Route name="app" path="/" handler={Application}>
 		<Route name="some-page" path="/some-page" handler={SomePage} />
+		<Route name="tier-list" path="/tier-list" handler={TierList} />
 		<Route name="readme" path="/readme" handler={ReadmePage} />
 		<Route name="todo" path="/todo" handler={TodoPage} >
 			<Route name="todolist" path="list/:list" handler={TodoListPage} />
