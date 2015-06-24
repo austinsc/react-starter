@@ -1,11 +1,13 @@
 import React from "react";
 import {TabbedArea, TabPane, Row, Col, Grid} from 'react-bootstrap';
+import {LineChart} from "react-chartjs";
 
 export default class TierList extends React.Component {
 	static getProps() {
 		return {};
 	}
 	render() {
+		let chartOptions = {};
 		return (
 			<div>
 				<h2>TierList</h2>
@@ -55,6 +57,11 @@ export default class TierList extends React.Component {
 								</ul>
 				    		</Col>
 				    	</Row>
+						<Row>
+
+							<LineChart data={randomData()} options={chartOptions} width="600" height="250"/>
+
+						</Row>
 
 				    </Grid>
 				    </TabPane>
@@ -64,6 +71,17 @@ export default class TierList extends React.Component {
 				    <TabPane eventKey={3} tab='Akali' disabled={true}><div className="circular icon-akali"></div></TabPane>
 				  </TabbedArea>				
 			</div>
+
 		);
 	}
+}
+function randomData(N, max, long){
+	return (
+		Array.apply(null, Array(N || 5))
+			.map(function(v){
+				return {
+					v: Math.floor(Math.random() * (max || 20)) + 1,
+					label:""
+				}
+			}))
 }
