@@ -129,13 +129,9 @@ var data = {
 								</ul>
 				    		</Col>
 				    	</Row>
-						<Row>
-							<Col md={12}>
-								<Line data={data} options={chartOptions} width="600" height="250"/>
-							</Col>
-						</Row>
 
 				    </Grid>
+						<Line data={data} options={chartOptions} width="600" height="250"/>
 				    </TabPane>
 				    
 
